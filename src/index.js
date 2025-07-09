@@ -19,11 +19,11 @@ import { CookiesProvider } from 'react-cookie';
 import { PromiseOne } from './Api/Promise';
 import { Async1 } from './Api/async';
 import { Book } from './Api/Book';
-import { store } from './Project/store';
-import { Provider } from 'react-redux';
-import { Count } from './redux/counterNum';
-import { AddComments } from './redux/Add-Comments';
-import { DataApi } from './redux/data-api';
+// import { store } from './Project/store';
+
+// import { Count } from './redux/counterNum';
+// import { AddComments } from './redux/Add-Comments';
+// import { DataApi } from './redux/data-api';
 //import { LazyComponent } from './LazyLoading/Lazy-component';
 import { Style } from './Style-Component/style';
 import { Parent } from './Context-Component/Parent';
@@ -34,27 +34,29 @@ import ErrorBoundary, { ErrorComponent } from './Error-Component/Error-parent';
 import { ContextParent } from './Context-api/Context-store';
 import { CookieOne } from './Cookie-component/Cookie-one';
 import { CarouselTwo } from './Carousel/Carousel-Component';
-import { CountCompoent } from './Num-Count/Count-Component';
-import {Addlike} from './redux/Addlike'
+
 import { ParentCon } from './Conditiona-Component/parent';
 import { MultipleFetching } from './Api/MultipleApi/ApiData';
 import { Pop } from './Pop-Component/Pop-up';
 import { ClassBaseComponent } from './Class-Component/Clss-one';
 import { Homepage } from './Portfolio/home';
 import { ApiAll } from './Api/api-all';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
+import { Addlikes } from './redux/Add-likes';
+import { Comments } from './redux/Comments';
 
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <CookiesProvider>
-  <Provider store={store}>
-  
-  
-  <Pop/> 
-  
-  </Provider>
+  <CookiesProvider> 
+
+ <Provider store={store}>
+  < Comments/>
+ </Provider>
+
    </CookiesProvider>
   </React.StrictMode>
 );

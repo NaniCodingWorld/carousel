@@ -45,6 +45,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store';
 import { Addlikes } from './redux/Add-likes';
 import { Comments } from './redux/Comments';
+import { ProdctFetch } from './redux/prodcut-redux';
 
 
 
@@ -54,7 +55,7 @@ root.render(
   <CookiesProvider> 
 
  <Provider store={store}>
-  < Comments/>
+  <ProdctFetch />
  </Provider>
 
    </CookiesProvider>

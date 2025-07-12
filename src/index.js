@@ -46,6 +46,7 @@ import { store } from './redux/store';
 import { Addlikes } from './redux/Add-likes';
 import { Comments } from './redux/Comments';
 import { ProdctFetch } from './redux/prodcut-redux';
+import { HideData } from './Event/hide-page';
 
 
 
@@ -55,7 +56,7 @@ root.render(
   <CookiesProvider> 
 
  <Provider store={store}>
-  <ProdctFetch />
+  <HideData />
  </Provider>
 
    </CookiesProvider>

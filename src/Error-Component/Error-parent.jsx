@@ -1,31 +1,27 @@
-import { error } from "jquery";
-import { Component } from "react";
+import React from "react";
 
-
-class  ErrorBoundary extends Component{
-    constructor(props){
-        super(props)
+export class Errorboundaries extends React.Component{
+    constructor(){
+        super()
         this.state = {
-            haserror : false
+            hasError:false
         }
     }
-    static getDerivedStateFromError(Error){
-         return {haserror: true}
-    }
-    componentDidCatch(info, error){
-    this.setState({haserror:true})
-    console.log(info, error)
-    }
-    render(){
-        if(this.state.haserror){
-            return(
-                <div className="text-center">
-                    <h4>Something Went wrong</h4>
-                </div>
-            )
-        }   
-        return this.props.children
-    }
+static getDerivedStateFromError(error){
+     this.setState({hasError : true})
 }
 
-export default ErrorBoundary
+    render(){
+       
+        if(this.state.hasError){
+              return(
+                <div>
+
+                </div>
+              )
+        }else{
+           return this.props.children
+        }
+       
+    }
+}
